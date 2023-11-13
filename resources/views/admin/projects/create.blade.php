@@ -54,6 +54,11 @@
         </select>
     </div>
 
+    @error('type_id')
+    <div class="text-danger">{{$message}}</div>
+    @enderror
+
+
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" rows="3">{{old('description')}}</textarea>
